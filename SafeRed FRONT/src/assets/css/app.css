@@ -1,0 +1,34 @@
+.orange {
+  color: #D65A31;
+}
+
+.darkblue {
+  color: #222831;
+}
+
+.blue {
+  color: #393E46;
+}
+
+.white {
+  color: #EEEEEE;
+}
+
+html {
+  border-radius: 20px;
+  background-color: #222831;
+}
+
+img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2,
+p {
+  color: #EEEEEE;
+  font-family: Sans-Serif;
+  text-align: center;
+}

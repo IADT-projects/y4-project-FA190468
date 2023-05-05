@@ -1,0 +1,79 @@
+     // useEffect(() => {
+        //     setUrl(currentURL);
+         
+    // }, [])
+
+    
+    // const Product = ({ product }) => {
+    //     const [pageURL, setPageURL] = useState(0);
+    //      useEffect(() => {
+    //        setPageURL(window.location.href);
+    //      })
+
+
+        // let queryOptions = { active: true, lastFocusedWindow: true };
+    // // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    // let [tab] = await chrome.tabs.query(queryOptions);
+
+/////////////////////////////////////////OLD CODE ONLY EXTENSIONS URL
+    //printing URL, but not updating where it is, maybe use setState
+    //assigning actual url with url
+    // const [url, setUrl] = useState("None") 
+    // useEffect(() => {
+    //     const currentURL = window.location.href;
+    //     setUrl(currentURL)
+    // }, [])
+   
+    //this shows everything in the console, 
+    //maybe this way I can create a JSON file with the info and send it?
+    const href = window.location.href;
+    console.log(window.location);
+/////////////////////////////////////////
+
+
+    async function getCurrentTab() {
+        let queryOptions = { active: true, currentWindow: true };
+        // `tab` will either be a `tabs.Tab` instance or `undefined`.
+        let tabs = await chrome.tabs.query(queryOptions);
+        return tabs[0].url;
+  }
+
+
+
+   //////// api de fuera
+
+  // API translated from PHP
+  //   axios.post(
+  //   'https://developers.checkphish.ai/api/neo/scan',
+  //   // '{ "apiKey": "crgkis2a4ul5z0nx4fb30x07i7i3enpd9x2st3wmkn18owoezbb6akpgtha65s2e", "urlInfo": { "url": "http://webidlogin101997.5gbfree.com/" } }',
+  //   {
+  //     'apiKey': 'crgkis2a4ul5z0nx4fb30x07i7i3enpd9x2st3wmkn18owoezbb6akpgtha65s2e',
+  //     'urlInfo': {
+  //       'url': 'http://webidlogin101997.5gbfree.com/'
+  //     }
+  //   },
+  //   {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'url': ""
+  //     }
+  //   }
+  // );
+
+  //   fetch("https://developers.checkphish.ai/api/neo/scan", {
+  //   body: "{}",
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //     Token: "crgkis2a4ul5z0nx4fb30x07i7i3enpd9x2st3wmkn18owoezbb6akpgtha65s2e"
+  //   },
+  //   method: "POST"
+  // })
+
+  // curl -X POST
+  // --header 'Content-Type: application/json'
+  // -d '{ "apiKey": "1f207653ec034ab9f04fbdd8e09fa7879205b4c85addeaa299da326167cc00a1",
+  // "urlInfo": { "url": "http://webidlogin101997.5gbfree.com/" } }'
+  // https://developers.checkphish.ai/api/neo/scan
+
+  /////// api fuera
